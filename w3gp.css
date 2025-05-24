@@ -1,0 +1,283 @@
+body {
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+  background: #f7fff0;
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  width: 700px;
+  margin: 40px auto 0 auto;
+  border: 2px solid #333;
+  border-radius: 16px;
+  background: #fff;
+  min-height: 350px;
+  padding: 32px 16px 32px 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.monster-select {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 0 16px 0;
+}
+
+.monster-card {
+  width: 140px;
+  height: 200px;
+  border: 2px solid #666;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0f7e0;
+  margin: 0 8px;
+  padding: 8px;
+}
+
+.monster-title {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.monster-hp {
+  margin-bottom: 16px;
+  color: #d12c2c;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.monster-btn, .rule-btn, .hand-btn, .result-card button, .title-btn, .next-battle-btn, .popup button {
+  margin-top: 8px;
+  padding: 8px 24px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #b4e49a;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.monster-btn:hover, .rule-btn:hover, .hand-btn:hover, .result-card button:hover, .title-btn:hover, .next-battle-btn:hover {
+  background: #8fd38a;
+}
+
+.rule-btn {
+  display: block;
+  margin: 24px auto 0 auto;
+}
+
+.quit-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.quit-btn:hover {
+  background: #e0e0e0;
+}
+
+.center-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hand-select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 1.2em;
+}
+
+.hand-select {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+}
+
+.hand-btn {
+  width: 120px;
+  height: 160px;
+  font-size: 1.4em;
+  border: 2px solid #666;
+  background: #e3f7d7;
+}
+
+.timer {
+  font-size: 1.1em;
+  color: #d16c00;
+}
+
+.game-info {
+  background: #f2f9e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+}
+
+.round-info {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.hp-display {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.hp-gauge-container {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.hp-gauge {
+  height: 100%;
+  background: linear-gradient(to right, #ff6b6b, #f06161);
+  width: 50%;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+}
+
+.result-card {
+  width: 180px;
+  height: 220px;
+  border: 2px solid #666;
+  border-radius: 8px;
+  background: #e0f7e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+.result-card button {
+  margin-top: 24px;
+}
+
+.aiko-msg {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #d16c00;
+}
+
+.cpu-don {
+  margin-top: 24px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.battle-result {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.win-msg, .lose-msg {
+  text-align: center;
+  margin: 36px 0 24px 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.win-msg {
+  color: #30843a;
+}
+
+.lose-msg {
+  color: #843030;
+}
+
+.monster-defeated, .monster-stats {
+  text-align: center;
+  margin: 32px 0;
+  font-size: 1.3em;
+  line-height: 1.8;
+}
+
+.next-battle-btn, .title-btn {
+  display: block;
+  margin: 24px auto;
+  padding: 10px 36px;
+  font-size: 1.2em;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  width: 300px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-content button {
+  margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+  .screen {
+    width: 98vw;
+    min-width: 0;
+    padding: 12px;
+  }
+  .monster-select, .hand-select, .result-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .monster-card, .result-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* style.cssに確実に以下を追加 */
+.hidden {
+  display: none !important;
+}
+
